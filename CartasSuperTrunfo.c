@@ -8,8 +8,8 @@ int main(){
     
     //Introdução do programa
 
-    printf("====Bem vindo ao jogo de cartas Super Trunfo====\n");
-    printf("Preciso que me ajude com dados para duas cartas.\n");
+    printf("====Bem vindo ao jogo de cartas Super Trunfo!====\n");
+    printf("Vamos comparar o PIB das carta para vermos quem ganha!.\n");
 
     //Entrada de dados da carta1
 
@@ -66,6 +66,15 @@ int main(){
     printf("Area (Em km²): %.2f\n", area2);
     printf("PIB (Em bilhões de reais): %.2f\n", pib2);
     printf("Pontos turísticos: %d\n", pont2);
+
+    //comparação dos PIBs
+    if(pib1 > pib2){
+        printf("A primeira carta venceu, pois tem o PIB maior.\n");
+    } else if (pib2 > pib1) {
+        printf("A segunda carta venceu, pois tem o PIB maior\n");
+    } else {
+        printf("Empate! As duas cartas tem o mesmo PIB.\n");
+    }
 
     return 0;
 }
