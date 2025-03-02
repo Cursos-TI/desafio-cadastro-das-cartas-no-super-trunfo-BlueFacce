@@ -2,13 +2,13 @@
 
 int main(){
     //Dados da primeira carta
-    char estado1[] = 'A', cidade1[] = 'São Paulo';
+    char estado1[] = "A", cidade1[] = "São Paulo";
     int pont1 = 50;
     float populacao1 = 12300000, area1 = 1521.11, pib1 = 690.79;
     float densidade1 = populacao1 / area1;
 
     //Dados da segunda carta
-    char estado2[] = 'B', cidade2[] = 'Rio de Janeiro';
+    char estado2[] = "B", cidade2[] = "Rio de Janeiro";
     int pont2 = 100;
     float populacao2 = 6748000, area2 = 1182.3, pib2 = 561.20;
     float densidade2 = populacao2 / area2;
@@ -21,7 +21,7 @@ int main(){
     printf("1.São Paulo\n");
     printf("2.Rio de Janeiro\n");
     printf("Digite a opção desejada:\n");
-    scanf("%d", opcaoCarta);
+    scanf("%d", &opcaoCarta);
 
     //Dados da carta escolhida
     char* cidadeEscolhida;
@@ -52,12 +52,12 @@ int main(){
     printf("1.População\n");
     printf("2.Area\n");
     printf("3.PIB\n");
-    printf("Pontos Turísticos\n");
-    printf("Densidade Demográfica\n");
+    printf("4.Pontos Turísticos\n");
+    printf("5.Densidade Demográfica\n");
     scanf("%d", &opcaoAtributo);
 
     //Comparação dos dados
-    switch (opcaoAtributo) {
+    switch ( opcaoAtributo ) {
         case 1: {  // Comparar População
             printf("%s (População: %.2f) vs %s (População: %.2f)\n", cidade1, populacao1, cidade2, populacao2);
             if (populacao1 > populacao2) printf("%s venceu em População!\n", cidade1);
@@ -93,7 +93,7 @@ int main(){
             else printf("Empate em Densidade Demográfica!\n");
             break;
         }
-        default: {  // Caso a opção do atributo seja inválida
+        default: { 
             printf("Opção inválida! Por favor, escolha um número entre 1 e 5.\n");
             break;
         }
